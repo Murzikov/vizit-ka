@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Савелий — Frontend‑developer</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-3Ygk8lbvfsdJXB9Ru/iJvYJWkyvy0jnzHlmH05hwSrE6Qa9Pja1HeCu1ITj4unAaz+StX0V9N4L/mBzC2+XASA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Lenis smooth scroll -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.6/dist/lenis.min.js"></script>
+  <!-- GSAP and ScrollTrigger -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-ozJxCTrtfzXqErmMQI9pwzsMg1azdbWmsWkaGMiMpVKfYecm1RMmZcSo4NR0vUqnly8SA5/HlzN+Hw14S0BvUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-QoBKafYdiztDQ6IE9Zlq4lPSHHP0KGLO3ZveYe5X2YG4mFacwB+wdtVgw2sULLK0oT3jPogD9HUHC6JZPQhSqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <nav class="nav" aria-label="Главная навигация">
+      <a href="#hero" class="logo">Савелий</a>
+      <ul class="nav-list">
+        <li><a href="#services-works" data-target="services-works">Услуги &amp; Работы</a></li>
+        <li><a href="#contacts" data-target="contacts">Контакты</a></li>
+      </ul>
+      <!-- Theme toggle -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему" aria-pressed="false">
+        <span class="toggle-thumb"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Ambient background with blurred blobs -->
+  <div class="ambient" aria-hidden="true">
+    <!-- Create multiple blobs for a layered background. These blobs will be animated via CSS and GSAP. -->
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title" class="hero-title">
+          <span class="line">Савелий</span><br>
+          <span class="line role">Frontend‑developer</span>
+        </h1>
+        <p class="hero-subtitle">Верстаю адаптивные сайты, внедряю WordPress и ускоряю загрузку. Помогаю бизнесам выглядеть современно и работать быстро.</p>
+        <div class="hero-buttons">
+          <a href="#services-works" class="btn btn-primary">Смотреть работы</a>
+          <a href="#contacts" class="btn btn-secondary">Контакты</a>
+        </div>
+      </div>
+      <!-- Abstract background shapes -->
+      <div class="hero-bg">
+        <div class="blob blob1" aria-hidden="true"></div>
+        <div class="blob blob2" aria-hidden="true"></div>
+        <div class="blob blob3" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Services & Works Section -->
+    <section id="services-works" class="section services-works" aria-labelledby="services-title">
+      <div class="services">
+        <h2 id="services-title" class="section-title">Услуги</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+            <h3>Адаптивная вёрстка</h3>
+            <p>HTML, CSS, JS — чистый и продуманный код под любые устройства.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-brands fa-wordpress" aria-hidden="true"></i>
+            <h3>Посадка на WordPress</h3>
+            <p>Интегрирую ваш дизайн в популярную CMS для лёгкого управления.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-server" aria-hidden="true"></i>
+            <h3>Посадка на хостинг</h3>
+            <p>Настраиваю домены, SSL и размещаю сайт на надёжном сервере.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+            <h3>Доработки WordPress</h3>
+            <p>Исправляю ошибки, обновляю темы и плагины, добавляю функциональность.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+            <h3>Исправление вёрстки</h3>
+            <p>Оптимизирую существующий код и устраняю баги для идеального отображения.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+            <h3>Сайты под ключ</h3>
+            <p>От идеи до запуска — полный цикл разработки с вашим участием.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-search" aria-hidden="true"></i>
+            <h3>Аудит сайта</h3>
+            <p>Тщательный анализ производительности, безопасности и юзабилити.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            <h3>Ускорение сайта</h3>
+            <p>Оптимизирую скорость загрузки и повышаю оценку Core Web Vitals.</p>
+          </div>
+          <div class="service-card">
+            <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+            <h3>Адаптив под устройства</h3>
+            <p>Обеспечиваю корректное отображение на смартфонах, планшетах и десктопах.</p>
+          </div>
+        </div>
+      </div>
+      <div class="works">
+        <h2 class="section-title">Примеры работ</h2>
+        <div class="works-grid">
+          <div class="work-card">
+            <div class="work-image-wrapper">
+              <img src="assets/work-1.jpg" alt="Превью проекта 1" loading="lazy">
+            </div>
+            <div class="work-info">
+              <h3>Лендинг</h3>
+              <p>Современный промо‑сайт с акцентом на удобство и скорость.</p>
+            </div>
+          </div>
+          <div class="work-card">
+            <div class="work-image-wrapper">
+              <img src="assets/work-2.jpg" alt="Превью проекта 2" loading="lazy">
+            </div>
+            <div class="work-info">
+              <h3>WordPress‑сайт</h3>
+              <p>Информационный ресурс на CMS с лёгким управлением контентом.</p>
+            </div>
+          </div>
+          <div class="work-card">
+            <div class="work-image-wrapper">
+              <img src="assets/work-3.jpg" alt="Превью проекта 3" loading="lazy">
+            </div>
+            <div class="work-info">
+              <h3>Оптимизация скорости</h3>
+              <p>Обновление кода и настроек для быстрого отклика и высокой оценки PageSpeed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="section contacts" aria-labelledby="contacts-title">
+      <h2 id="contacts-title" class="section-title">Контакты</h2>
+      <p class="contacts-subtitle">Пиши, отвечу без магии, но быстро.</p>
+      <div class="contacts-icons">
+        <!-- Встраиваем SVG-иконки напрямую для надёжного отображения -->
+        <a href="https://vk.com/savamurk" class="contact-icon" target="_blank" rel="noopener noreferrer" aria-label="VK" data-tooltip="VK">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619 0 0-1.115 2.719-2.695 4.482-.51.513-.743.675-1.021.675-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504 0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836-.743 0-2.551-2.729-3.624-5.853-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619 0 .582.743 3.462 3.461 7.271 1.812 2.601 4.363 4.011 6.687 4.011 1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752.324 0 .882.164 2.183 1.417 1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931-.197-.615-.907-1.51-1.849-2.569-.512-.604-1.277-1.254-1.51-1.579-.325-.419-.231-.604 0-.976.001.001 2.672-3.761 2.95-5.04z"/>
+          </svg>
+        </a>
+        <a href="https://t.me/dairow0" class="contact-icon" target="_blank" rel="noopener noreferrer" aria-label="Telegram" data-tooltip="Telegram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/>
+          </svg>
+        </a>
+        <a href="mailto:saveliymetel@gmail.com" class="contact-icon" aria-label="Email" data-tooltip="Email">
+          <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+          </svg>
+        </a>
+      </div>
+      <ul class="contacts-list">
+        <li><span class="bullet-icon">•</span> Качественный код и внимание к деталям</li>
+        <li><span class="bullet-icon">•</span> Забота о скорости и доступности</li>
+        <li><span class="bullet-icon">•</span> Современные фреймворки и лучшие практики</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Савелий. Все права защищены.</p>
+  </footer>
+
+  <!-- App Script -->
+  <script defer src="app.js"></script>
+</body>
+</html>
